@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news/home/home_screen.dart';
+import 'package:news/my_theme_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,10 +35,9 @@ class MyApp extends StatelessWidget {
   routes: {
     // When navigating to the "/" route, build the FirstScreen widget.
     '/homeScreen': (context) => HomeScreen(),
-    
-
   },
 
+  theme: MyThemeData.lightMode,
   debugShowCheckedModeBanner: false,
 
     );
