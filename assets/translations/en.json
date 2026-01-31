@@ -1,3 +1,13 @@
 {
-    "news_app" : "News App"
+    "news_app" : "News App",
+    "try_again" : "Try Again",
+    "something_went_wrong" : "Something Went Wrong",
+    "ok" :  "Ok",
+    "Pick your category of interest" : "Pick your category of interest",
+    "business" : "Business",
+    "entertainment" : "Environment",
+    "general" : "Politics",
+    "health" : "Health",
+    "science" : "Science",
+    "sports" : "Sports"
 }

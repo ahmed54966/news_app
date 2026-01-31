@@ -1,3 +1,13 @@
 {
-    "news_app" : "الاخبار"
+    "news_app" : "الاخبار",
+    "try_again" : "حاول مره اخرى",
+    "something_went_wrong" : "هناك خطأ ما",
+    "ok" : "موافق",
+    "Pick your category of interest" : "اختر الفئه التي تريدها" ,
+    "business" : "الاعمال",
+    "entertainment" : "البيئه",
+    "general" : "السياسه",
+    "health" : "الصحه",
+    "science" : "العلوم",
+    "sports" : "الرياضه"  
 }
