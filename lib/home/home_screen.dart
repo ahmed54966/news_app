@@ -1,7 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news/app_colors.dart';
+import 'package:news/category/category_details.dart';
 import 'package:news/category/cattegory_fragment.dart';
+import 'package:news/home_drawer/home_drawer.dart';
+import 'package:news/model/category.dart';
+import 'package:news/settings/settings_tab.dart';
+
 
 
 class HomeScreen extends StatefulWidget{
@@ -28,15 +33,44 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text("news_app".tr(),
+            title: Text(selectedSideMenuItem == HomeDrawer.settings ?
+            "settings".tr() :
+            selectedCategory == null ? 
+              "news_app".tr():selectedCategory!.id,
             style: Theme.of(context).textTheme.titleLarge,),
+            iconTheme:  IconThemeData(color: AppColors.whiteColor),
           ),
-          body: CattegoryFragment()
+          drawer: Drawer( 
+            child: HomeDrawer(onSideMenuItemClick : onSideMenuItemClick ),
+          ),
+          body: selectedSideMenuItem == HomeDrawer.settings ?
+            SettingsTab() :
+          selectedCategory == null ?
+          CattegoryFragment(onCategoryFragmentClick:onCategoryItemClick ,) :
+          CategoryDetails(category: selectedCategory!,),
           
         )
 
 
       ],
     );
+  }
+  Categories? selectedCategory;
+  void onCategoryItemClick (Categories newCategory){
+
+    selectedCategory = newCategory ;
+  setState(() {
+    
+  });
+  }
+
+  int selectedSideMenuItem = HomeDrawer.categories;
+  void onSideMenuItemClick (int onSideMenuItem){
+    selectedSideMenuItem = onSideMenuItem;
+    selectedCategory = null;
+    Navigator.pop(context);
+    setState(() {
+      
+    });
   }
 }

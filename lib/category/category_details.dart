@@ -1,11 +1,18 @@
 import 'package:easy_localization/easy_localization.dart';
+
 import 'package:flutter/material.dart';
 import 'package:news/app_colors.dart';
 import 'package:news/model/api_manager.dart';
+import 'package:news/model/category.dart';
 import 'package:news/model/source_response.dart';
 import 'package:news/tabs/TabWidget.dart';
 
+// ignore: must_be_immutable
 class CategoryDetails extends StatefulWidget {
+
+  Categories category ;
+  CategoryDetails({required this.category});
+
   @override
   State<CategoryDetails> createState() => _CategoryDetailsState();
 }
@@ -15,7 +22,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
   Widget build(BuildContext context) {
     return/////api 
           FutureBuilder<SourceResponse?>(
-            future: ApiManager.getSources(),
+            future: ApiManager.getSources(widget.category.id),
             builder: (context , snapshot){
               if(snapshot.connectionState == ConnectionState.waiting){
                 return Center(child: CircularProgressIndicator(
@@ -27,7 +34,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                   children: [
                     Text("something_went_wrong".tr()),
                     ElevatedButton(onPressed: (){
-                      ApiManager.getSources();
+                      ApiManager.getSources(widget.category.id);
                       setState(() {
                         
                       });
@@ -45,7 +52,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                 );
               }
               var sourceList = snapshot.data!.sources!;
-              return TabWidget(sourcesList: sourceList);
+              return TabWidget(sourcesList: sourceList, );
 
             }
             );

@@ -9,5 +9,7 @@
     "general" : "السياسه",
     "health" : "الصحه",
     "science" : "العلوم",
-    "sports" : "الرياضه"  
+    "sports" : "الرياضه" ,
+    "categories" : "الفئات" ,
+    "settings" : "الاعدادات"
 }

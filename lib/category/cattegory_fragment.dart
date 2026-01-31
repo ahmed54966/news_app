@@ -1,11 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:news/category/category_item.dart';
 import 'package:news/model/category.dart';
 
-class CattegoryFragment extends StatelessWidget {
+// ignore: must_be_immutable
+class CattegoryFragment extends StatefulWidget {
+  Function onCategoryFragmentClick;
+  CattegoryFragment({required this.onCategoryFragmentClick});
+
+  @override
+  State<CattegoryFragment> createState() => _CattegoryFragmentState();
+}
+
+class _CattegoryFragmentState extends State<CattegoryFragment> {
   var categoriesList = Categories.getCategory();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +34,13 @@ class CattegoryFragment extends StatelessWidget {
               mainAxisSpacing:10 ,
               crossAxisSpacing: 10),
               itemBuilder: (context , index){
-                return CategoryItem(category: categoriesList[index], index: index);
+                return InkWell(
+                  onTap: () {
+                    widget.onCategoryFragmentClick(categoriesList[index]);
+                    
+                  },
+                  
+                  child: CategoryItem(category: categoriesList[index], index: index));
               },
               itemCount:categoriesList.length ,),
           )

@@ -2,14 +2,16 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news/app_colors.dart';
 import 'package:news/model/api_manager.dart';
+import 'package:news/model/category.dart';
 import 'package:news/model/news_response.dart';
 import 'package:news/model/source_response.dart';
 import 'package:news/news/news_item.dart';
 
 // ignore: must_be_immutable
 class NewsWidget extends StatefulWidget {
+  
   Source source;
-  NewsWidget({super.key, required this.source});
+  NewsWidget({super.key, required this.source });
 
   @override
   State<NewsWidget> createState() => _NewsWidgetState();
@@ -31,7 +33,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                   children: [
                     Text("something_went_wrong".tr()),
                     ElevatedButton(onPressed: (){
-                      ApiManager.getSources();
+                      ApiManager.getNewsBySourceId(widget.source.id??"");
                       setState(() {
                         
                       });

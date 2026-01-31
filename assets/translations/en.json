@@ -9,5 +9,7 @@
     "general" : "Politics",
     "health" : "Health",
     "science" : "Science",
-    "sports" : "Sports"
+    "sports" : "Sports",
+    "categories" : "Categories",
+    "settings" : "Settings"
 }
