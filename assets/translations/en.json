@@ -11,5 +11,8 @@
     "science" : "Science",
     "sports" : "Sports",
     "categories" : "Categories",
-    "settings" : "Settings"
+    "settings" : "Settings",
+    "change_language" : "Change Language",
+    "english" : "English",
+    "arabic" : "Arabic"
 }

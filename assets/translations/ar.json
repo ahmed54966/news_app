@@ -11,5 +11,8 @@
     "science" : "العلوم",
     "sports" : "الرياضه" ,
     "categories" : "الفئات" ,
-    "settings" : "الاعدادات"
+    "settings" : "الاعدادات",
+    "change_language" : "تغيير اللغه",
+    "english" : "اللغه الانجليزيه",
+    "arabic" : "اللغه العربيه"
 }
