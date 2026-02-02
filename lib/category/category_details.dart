@@ -1,7 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news/app_colors.dart';
+import 'package:news/category/cubit/category_datails_view_model.dart';
+import 'package:news/category/cubit/sources_state.dart';
 import 'package:news/model/api_manager.dart';
 import 'package:news/model/category.dart';
 import 'package:news/model/source_response.dart';
@@ -18,21 +21,30 @@ class CategoryDetails extends StatefulWidget {
 }
 
 class _CategoryDetailsState extends State<CategoryDetails> {
+
+  CategoryDatailsViewModel viewModel = CategoryDatailsViewModel();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    viewModel.getSources(widget.category.id);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return/////api 
-          FutureBuilder<SourceResponse?>(
-            future: ApiManager.getSources(widget.category.id),
-            builder: (context , snapshot){
-              if(snapshot.connectionState == ConnectionState.waiting){
-                return Center(child: CircularProgressIndicator(
+    return BlocBuilder<CategoryDatailsViewModel,SourcesState>(
+      bloc: viewModel,
+      builder: (context , state){
+
+        if(state is SourceLoadingState){
+          return Center(child: CircularProgressIndicator(
                   color: AppColors.primaryColor,
                 ));
-
-              }else if (snapshot.hasError){
-                return Column(
+        }else if (state is SourceErrorState){
+          return Column(
                   children: [
-                    Text("something_went_wrong".tr()),
+                    Text(state.errorMessage),
                     ElevatedButton(onPressed: (){
                       ApiManager.getSources(widget.category.id);
                       setState(() {
@@ -41,20 +53,16 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     }, child: Text("try_again".tr()))
                   ],
                 );
-              }
+        }else if (state is SourceSuccessState){
+          return TabWidget(sourcesList: state.sourceList);
+        }
+        return Container();
 
-              if(snapshot.data!.status != "ok"){
-                return Column(
-                  children: [
-                    Text(snapshot.data!.message!),
-                    ElevatedButton(onPressed: (){}, child: Text("try_again".tr()))
-                  ],
-                );
-              }
-              var sourceList = snapshot.data!.sources!;
-              return TabWidget(sourcesList: sourceList, );
 
-            }
-            );
+      }
+      );
+    
+
+
   }
 }
