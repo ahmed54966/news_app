@@ -7,7 +7,7 @@ import 'package:news/model/source_response.dart';
 class ApiManager {
 
 ///https://newsapi.org/v2/top-headlines/sources?apiKey=4ff4c2e368e041f9992adb7aeaaf0307
-  static Future <SourceResponse?> getSources(String categoryId)async{
+  Future <SourceResponse?> getSources(String categoryId)async{
     Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.sourceApi,{
       "apiKey" : ApiConstants.apiKey,
       "category" :categoryId
@@ -25,7 +25,7 @@ class ApiManager {
   }
 
   //https://newsapi.org/v2/everything?q=bitcoin&apiKey=4ff4c2e368e041f9992adb7aeaaf0307
-  static Future<Newsresponse?> getNewsBySourceId(String sourceId)async{
+  Future<Newsresponse?> getNewsBySourceId(String sourceId)async{
     Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.newsApi,{
       "apiKey" : ApiConstants.apiKey,
       "sources" : sourceId
