@@ -1,3 +1,4 @@
+news app is application of news with api and clean arch(MVVM)
 # news
 
 A new Flutter project.
