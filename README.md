@@ -36,13 +36,13 @@ Navigation: Side Drawer & Custom Route management.
     </tr>
     <tr>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/splash_screen.jpeg" width="220" style="border-radius: 10px;" />
+        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/splash_screen.jpeg" width="220" style="border-radius: 10px;" />
       </td>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/category.jpeg" width="220" style="border-radius: 10px;" />
+        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/category.jpeg" width="220" style="border-radius: 10px;" />
       </td>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/environmaent_news.jpeg" width="220" style="border-radius: 10px;" />
+        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/environmaent_news.jpeg" width="220" style="border-radius: 10px;" />
       </td>
     </tr>
     <tr>
@@ -51,10 +51,10 @@ Navigation: Side Drawer & Custom Route management.
       <td></td> </tr>
     <tr>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/drawer.jpeg" width="220" style="border-radius: 10px;" />
+        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/drawer.jpeg" width="220" style="border-radius: 10px;" />
       </td>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/settings.jpeg" width="220" style="border-radius: 10px;" />
+        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/settings.jpeg" width="220" style="border-radius: 10px;" />
       </td>
       <td></td>
     </tr>
