@@ -1,4 +1,29 @@
-news app is application of news with api and clean arch(MVVM)
+📰 News App - Flutter Application
+A modern and responsive News Application built with Flutter that fetches real-time news data from a RESTful API. The app provides a seamless user experience for browsing news across various categories like Business, Science, Sports, and more.
+
+✨ Features
+User Authentication: Complete Login and Sign-up flow with form validation.
+
+Dynamic News Fetching: Integrated with a News API to provide up-to-date headlines.
+
+Category-Based Browsing: Users can pick their interests (Business, Health, Politics, Science, Sports, Environment).
+
+Source Filtering: Ability to filter news by specific publishers/sources (e.g., Polygon, The Lad Bible).
+
+Settings & Localization: Support for changing language and app configurations.
+
+Modern UI/UX: Clean design using custom widgets, side drawer navigation, and responsive layouts.
+
+🚀 Tech Stack
+Framework: Flutter
+
+Language: Dart
+
+API Integration: http 
+
+Architecture:(MVVM).
+
+Navigation: Side Drawer & Custom Route management.
 # news
 
 A new Flutter project.
