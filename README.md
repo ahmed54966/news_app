@@ -23,6 +23,8 @@ API Integration: http
 
 Architecture:(MVVM).
 
+state Management : cubit .
+
 Navigation: Side Drawer & Custom Route management.
 
 <h2 align="center">📸 App Screenshots</h2>
