@@ -31,37 +31,32 @@ Navigation: Side Drawer & Custom Route management.
   <table style="border: none;">
     <tr>
       <td align="center"><b>Splash Screen</b></td>
-      <td align="center"><b>Authentication</b></td>
       <td align="center"><b>Main Categories</b></td>
-    </tr>
-    <tr>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/splash_screen.jpeg" width="200" style="border-radius: 10px;" />
-      </td>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/login.jpeg" width="200" style="border-radius: 10px;" />
-        <br/><br/>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/register.jpeg" width="200" style="border-radius: 10px;" />
-      </td>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/category.jpeg" width="200" style="border-radius: 10px;" />
-      </td>
-    </tr>
-    <tr>
       <td align="center"><b>News Feed</b></td>
-      <td align="center"><b>Navigation Drawer</b></td>
-      <td align="center"><b>Settings</b></td>
     </tr>
     <tr>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/environmaent_news.jpeg" width="200" style="border-radius: 10px;" />
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/splash_screen.jpeg" width="220" style="border-radius: 10px;" />
       </td>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/drawer.jpeg" width="200" style="border-radius: 10px;" />
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/category.jpeg" width="220" style="border-radius: 10px;" />
       </td>
-      <td>
-        <img src="https://github.com/ahmed54966/news_app/blob/585cce0f0cc5da5ff84cdf03b4fa18aa77ad1250/screenshots/settings.jpeg" width="200" style="border-radius: 10px;" />
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/environmaent_news.jpeg" width="220" style="border-radius: 10px;" />
       </td>
+    </tr>
+    <tr>
+      <td align="center"><b>Navigation Drawer</b></td>
+      <td align="center"><b>Settings UI</b></td>
+      <td></td> </tr>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/drawer.jpeg" width="220" style="border-radius: 10px;" />
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/ahmed54966/news_app/main/screenshots/settings.jpeg" width="220" style="border-radius: 10px;" />
+      </td>
+      <td></td>
     </tr>
   </table>
 </div>
